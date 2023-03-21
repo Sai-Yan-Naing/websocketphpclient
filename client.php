@@ -2,8 +2,8 @@
 include "./vendor/autoload.php";
 
 $client = new WebSocket\Client("ws://localhost:8081");
-$client->text('Hello PieSocket!');
-
+$client->send('Hello PieSocket!');
+// echo json_encode(['test'=>'hello']);die;
 while (true) {
     try {
         $message = $client->receive();

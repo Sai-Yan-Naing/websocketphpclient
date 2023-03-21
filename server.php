@@ -40,6 +40,7 @@ class MyServer implements MessageComponentInterface {
         $from->send("You said: $msg");
         $from->send("You said: $msg");
         $from->send("You said: $msg");
+        echo "from client data ".$msg;
     }
 
     public function onClose(ConnectionInterface $conn) {
